@@ -11,5 +11,28 @@
 p{
   color: #4683BB;
   margin-left: 20px;
-  font-size: 30px;
+  font-size: 24px;
+}
+
+nav {
+  background-color: #C4E2FF;
+}
+
+nav ul a{
+  color: #4683BB;
+  display: inline-flex;
+}
+
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav{
+  box-shadow: none !important;
+}
+
+i.material-icons {
+  display: inline;
+}
+
+
+nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+  line-height: 40px;
+  height: 40px;
 }

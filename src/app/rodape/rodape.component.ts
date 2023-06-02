@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./rodape.component.css']
 })
 export class RodapeComponent {
-
+    public ano: string = "2023";
+    public versao: string = "1.0";
 }

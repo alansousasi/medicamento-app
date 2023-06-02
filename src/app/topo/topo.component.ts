@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class TopoComponent {
 
+  public titulo: string = "Sistema de medicamentos";
+  public classTopo: string = "topo";
 }

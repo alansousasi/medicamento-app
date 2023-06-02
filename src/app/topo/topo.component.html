@@ -1,3 +1,13 @@
-<div class="topo">
-  <p>Sistema de medicamentos</p>
+<div [class]="classTopo">
+  <p>{{titulo}}</p>
+  <nav>
+    <div class="nav-wrapper">
+      <!--<a href="#" class="brand-logo right">Logo</a>-->
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="#"><i class="tiny material-icons">home</i>Home</a></li>
+        <li><a href="#"><i class="tiny material-icons">local_hospital</i>Medicamentos</a></li>
+        <li><a href="#"><i class="tiny material-icons">account_balance</i>Laboratórios</a></li>
+      </ul>
+    </div>
+  </nav>
 </div>
