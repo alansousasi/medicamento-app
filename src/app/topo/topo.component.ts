@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class TopoComponent {
 
-  public titulo: string = "Sistema de medicamentos";
-  public classTopo: string = "topo";
+  titulo: string = "Controle de Medicamentos";
+  slogan: string = "Sistema para controle de medicamentos";
+  classTopo: string = "topo";
 }

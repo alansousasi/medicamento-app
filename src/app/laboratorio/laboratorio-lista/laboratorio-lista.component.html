@@ -1,0 +1,32 @@
+<div class="container">
+
+  <h1>Laboratórios</h1>
+  <h5>Tela para realizar o CRUD dos laboratórios.</h5>
+
+  <br/>
+  <a routerLink="/laboratorio/cadastro/" class="btn-floating btn-small waves-effect waves-light blue"><i class="material-icons">add</i></a>
+
+  <br/>
+  <br/>
+
+  <div>
+    <table class="striped responsive-table centered">
+      <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Ações</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let laboratorio of laboratorios">
+          <app-laboratorio-item [laboratorio]="laboratorio"></app-laboratorio-item>
+          <td>
+            <a class="waves-effect waves-light btn-small blue" (click)="edit(laboratorio)" style="margin-right: 10px !important"><i class="material-icons left">edit</i>Editar</a>
+            <a class="waves-effect waves-light btn-small red" (click)="delete(laboratorio)"><i class="material-icons left">delete</i>Excluir</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

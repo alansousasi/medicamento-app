@@ -1,12 +1,16 @@
 <div [class]="classTopo">
-  <p>{{titulo}}</p>
+  <p class="titulo">{{titulo}}</p>
+  <p class="subtitulo">{{slogan}}</p>
+  <div class="logo">
+  </div>
+  <img src="assets/medicamento_logo.png" class="logo img-fluid"/>
   <nav>
     <div class="nav-wrapper">
       <!--<a href="#" class="brand-logo right">Logo</a>-->
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><a href="#"><i class="tiny material-icons">home</i>Home</a></li>
-        <li><a href="#"><i class="tiny material-icons">local_hospital</i>Medicamentos</a></li>
-        <li><a href="#"><i class="tiny material-icons">account_balance</i>Laboratórios</a></li>
+        <li><a routerLink="/medicamento"><i class="tiny material-icons">local_hospital</i>Medicamentos</a></li>
+        <li><a routerLink="/laboratorio"><i class="tiny material-icons">account_balance</i>Laboratórios</a></li>
       </ul>
     </div>
   </nav>

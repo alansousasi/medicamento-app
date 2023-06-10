@@ -1,0 +1,23 @@
+<div class="container">
+
+  <h1>Cadastro de Laboratórios</h1>
+
+  <br/>
+
+    <div class="row">
+      <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="nome" type="text" value="{{nome}}">
+              <label for="nome" [ngClass]="{'active': nome }">Nome</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <a class="waves-effect waves-light btn-small blue" style="margin-right: 10px !important"><i class="material-icons left">save</i>Salvar</a>
+              <a routerLink="/laboratorio" class="waves-effect waves-light btn-small red"><i class="material-icons left">cancel</i>Cancelar</a>
+            </div>
+          </div>
+        </form>
+      </div>
+</div>
