@@ -8,9 +8,15 @@
 
   <br/>
   <br/>
-
+  <div id="msg"
+    class="card-panel white-text"
+    [class.red]="!this.isSuccess"
+    [class.blue]="this.isSuccess"
+    *ngIf="this.isShowMessage">
+    {{this.message}}
+  </div>
   <div>
-    <table class="striped responsive-table centered">
+    <table class="striped responsive-table centered" *ngIf="laboratorios && laboratorios!.length > 0">
       <thead>
         <tr>
             <th>Nome</th>

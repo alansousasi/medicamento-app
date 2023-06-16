@@ -8,7 +8,7 @@ import {MatInputModule} from '@angular/material/input';
 
 //
 
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopoComponent } from './topo/topo.component';
@@ -35,7 +35,8 @@ import { LaboratorioCadastroComponent } from './laboratorio/laboratorio-cadastro
     AppRoutingModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

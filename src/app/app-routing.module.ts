@@ -7,7 +7,7 @@ import { LaboratorioCadastroComponent } from './laboratorio/laboratorio-cadastro
 const routes: Routes = [
   {path:'medicamento', component: MedicamentoComponent},
   {path:'laboratorio', component: LaboratorioListaComponent},
-  {path:'laboratorio/cadastro/:nome', component: LaboratorioCadastroComponent},
+  {path:'laboratorio/cadastro/:id/:nome', component: LaboratorioCadastroComponent},
   {path:'laboratorio/cadastro', component: LaboratorioCadastroComponent},
 ];
 
