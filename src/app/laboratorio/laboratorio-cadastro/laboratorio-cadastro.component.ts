@@ -5,6 +5,7 @@ import { ActivatedRoute, Router, Data } from '@angular/router';
 import { LaboratorioStorageService } from './laboratorio-storage.service';
 import { Shared } from 'src/app/utils/shared';
 import { v4 as uuidv4 } from 'uuid';
+import { LaboratorioService } from 'src/app/service/laboratorio.service';
 
 @Component({
   selector: 'app-laboratorio-cadastro',
@@ -20,33 +21,104 @@ export class LaboratorioCadastroComponent implements OnInit{
   isSuccess!: boolean;
   message!: string;
 
-  constructor(public route: ActivatedRoute, private labService: LaboratorioStorageService) {
+  constructor(public route: ActivatedRoute, private _labService: LaboratorioService) {
 
   }
 
   ngOnInit(): void {
 
-    Shared.initializeWebStorage();
-    this.laboratorio = new Laboratorio('', '');
-    this.laboratorio.nome = this.route.snapshot.params['nome'];
-    this.laboratorio.id = this.route.snapshot.params['id'];
+    let id = this.route.snapshot.params['id'];
+
+     if(id != ''){
+      this.getLaboratorio(id);
+     }else{
+      this.laboratorio = new Laboratorio('', '');
+     }
+
+  }
+
+  getLaboratorio(id: string){
+    this._labService.getLaboratorios()
+    .subscribe(
+      lab => {
+        lab.forEach(item => {
+          if (item.id == id){
+            this.laboratorio = new Laboratorio(
+              item.id,
+              item.nome)
+          }
+        });
+      }
+    )
   }
 
   onSubmit() {
     this.isSubmitted = true;
-    if (!this.labService.isExist(this.laboratorio.id)) {
-      this.laboratorio.id = uuidv4();
-      this.labService.save(this.laboratorio);
-    } else {
-        this.labService.update(this.laboratorio);
-    }
-    this.isShowMessage = true;
-    this.isSuccess = true;
-    this.message = 'Cadastro realizado com sucesso!';
 
+    if (this.laboratorio.id != '') {
+      this.update();
+      this.isShowMessage = true;
+      this.isSuccess = true;
+    } else {
+      this.laboratorio.id = uuidv4();
+      this.save();
+      this.isShowMessage = true;
+      this.isSuccess = true;
+    }
     this.form.reset();
-    this.laboratorio = new Laboratorio('', '');
   }
+
+  save(){
+      let self = this;
+      let myPromise = new Promise(function(myResolve, myReject) {
+        self._labService.save(self.laboratorio).subscribe(
+
+          lab => {
+            myResolve("OK");
+          },
+          err => {
+            myReject("Error");
+          }
+        );
+      });
+
+      myPromise.then(
+        function(value) {
+          self.message = 'Cadastro realizado com sucesso!';
+          self.laboratorio = new Laboratorio('', '');
+        },
+        function(error) {
+          console.log("Erro ao cadastrar!")
+        }
+      );
+    }
+
+    update(){
+
+      let self = this;
+      let myPromise = new Promise(function(myResolve, myReject) {
+        self._labService.update(self.laboratorio.id,self.laboratorio).subscribe(
+        lab => {
+          myResolve("OK");
+        },
+        err => {
+          myReject("Error");
+        }
+      );
+    });
+
+    myPromise.then(
+      function(value) {
+        self.message = "Atualização realizada com sucesso!";
+        self.laboratorio = new Laboratorio('', '');
+
+      },
+      function(error) {
+        console.log("Erro ao atualizar!")
+      }
+    );
+
+    }
 
 
 }
