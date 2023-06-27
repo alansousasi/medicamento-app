@@ -1,0 +1,73 @@
+.topo{
+  top: 0;
+  left: 0;
+  height: 150px;
+  position: fixed;
+  width: 100%;
+  color: #4683BB;
+  background: #C4E2FF;
+}
+
+.titulo{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38px;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.05em;
+
+  color: #4683BB;
+}
+
+.subtitulo{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #4683BB;
+}
+
+h1{
+  color: #4683BB;
+  margin-left: 20px;
+  font-size: 40px;
+  margin-top: 60px;
+}
+
+
+nav {
+  background-color: #C4E2FF;
+}
+
+nav ul a{
+  color: #4683BB;
+  display: inline-flex;
+}
+
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav{
+  box-shadow: none !important;
+}
+
+i.material-icons {
+  display: inline;
+}
+
+
+nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+  line-height: 40px;
+  height: 40px;
+}
+
+.logo {
+  position: relative;
+  width: 183px;
+  height: 185px;
+  float: right;
+  top: 0px;
+  z-index: 1;
+  margin-top: -80px;
+  margin-left: -200px;
+}

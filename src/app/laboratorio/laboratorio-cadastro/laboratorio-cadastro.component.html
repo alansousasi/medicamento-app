@@ -1,0 +1,41 @@
+<div class="container">
+
+  <h1>Cadastro de Laboratórios</h1>
+
+  <br/>
+
+    <div class="row">
+      <div id="msg"
+        class="card-panel white-text"
+        [class.red]="!this.isSuccess"
+        [class.blue]="this.isSuccess"
+        *ngIf="this.isShowMessage">
+        {{this.message}}
+      </div>
+      <form class="col s12" #form="ngForm" (submit)="onSubmit()">
+          <div class="row">
+            <div class="input-field col s6">
+              <input
+                id="nome"
+                name="nome"
+                type="text"
+                [(ngModel)]="this.laboratorio.nome"
+                pattern="\s?[A-ZÀ-Ú][a-zà-ú]+"
+                required
+                #name="ngModel"
+                class="validate">
+                <div class="red-text" [hidden]="name.valid || name.untouched">
+                  Por favor, informe o nome.
+                </div>
+              <label for="nome" [ngClass]="{'active': this.laboratorio.nome }">Nome *</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <button class="waves-effect waves-light btn-small blue" type="submit" style="margin-right: 10px !important" [disabled]="!form.valid"><i class="material-icons left">save</i>Salvar</button>
+              <a routerLink="/laboratorio" class="waves-effect waves-light btn-small red"><i class="material-icons left">cancel</i>Cancelar</a>
+            </div>
+          </div>
+        </form>
+      </div>
+</div>

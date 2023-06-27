@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~materialize-css/dist/css/materialize.css";
+@import "~material-icons/iconfont/material-icons.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: #4683BB}
+
+.mat-body p, .mat-body-2 p, .mat-typography .mat-body p, .mat-typography .mat-body-2 p, .mat-typography p{
+  margin: 20px;
+}
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #4683BB !important;
+  box-shadow: 0 1px 0 0 #4683BB !important;
+}
+
+/* label color */
+.input-field label {
+  color: #4683BB !important;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #4683BB !important;
+}
+
+h1, h2, h3{
+  color: #4683BB;
+}
+
+table.striped>tbody>tr:nth-child(odd) {
+  background-color: #dcecfb !important;
+}
+table.striped>thead{
+  background-color: #f1f1f1 !important;
+}
+
+@media only screen and (max-width: 992px){
+
+  .hide-on-med-and-down {
+
+    display: block !important;
+
+  }
+
+}
+
+
+@media only screen and (max-width: 600px){
+
+  .logo {
+
+    display: none !important;
+
+  }
+
+  .mat-body p, .mat-body-2 p, .mat-typography .mat-body p, .mat-typography .mat-body-2 p, .mat-typography p {
+    margin: 10px !important;
+  }
+
+}
+
