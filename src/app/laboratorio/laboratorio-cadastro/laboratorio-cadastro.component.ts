@@ -29,7 +29,7 @@ export class LaboratorioCadastroComponent implements OnInit{
 
     let id = this.route.snapshot.params['id'];
 
-     if(id != ''){
+     if(id != '' && id !== undefined){
       this.getLaboratorio(id);
      }else{
       this.laboratorio = new Laboratorio('', '');

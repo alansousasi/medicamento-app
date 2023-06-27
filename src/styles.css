@@ -35,3 +35,28 @@ table.striped>thead{
   background-color: #f1f1f1 !important;
 }
 
+@media only screen and (max-width: 992px){
+
+  .hide-on-med-and-down {
+
+    display: block !important;
+
+  }
+
+}
+
+
+@media only screen and (max-width: 600px){
+
+  .logo {
+
+    display: none !important;
+
+  }
+
+  .mat-body p, .mat-body-2 p, .mat-typography .mat-body p, .mat-typography .mat-body-2 p, .mat-typography p {
+    margin: 10px !important;
+  }
+
+}
+

@@ -5,9 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './topo.component.html',
   styleUrls: ['./topo.component.css']
 })
-export class TopoComponent {
+export class TopoComponent{
 
   titulo: string = "Controle de Medicamentos";
   slogan: string = "Sistema para controle de medicamentos";
   classTopo: string = "topo";
+
 }
