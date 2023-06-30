@@ -8,7 +8,12 @@ Este projeto tem como objetivo implementar uma aplicação para gestão e contro
 https://alansousasi.github.io/medicamento-app/
 
 # Protótipo
+
 https://www.figma.com/file/eHQ5f1CNUdLX91BdcaWF0L/medicamentos?type=design&node-id=2%3A4&t=yFn5Qho6SXCdKwra-1
+
+# Entrega projeto - Documentação - Checklist
+
+https://1drv.ms/b/s!AkMdb1FdT2MDiF1__ZDGtL5_nl7I?e=ZaMPzx
 
 # Checklist
 

@@ -2,7 +2,7 @@
   "laboratorio": [
     {
       "id": "9bfb1b44-459c-433e-bc7d-d8a27ff7208a",
-      "nome": "Testeabc"
+      "nome": "Testeab"
     },
     {
       "id": "c9405db5-978a-4710-a3e9-038865d04199",
@@ -11,6 +11,10 @@
     {
       "id": "257d98df-80dd-4630-bce4-50a11cb29ba4",
       "nome": "Testedas"
+    },
+    {
+      "id": "fdceefe4-e983-4dce-8c28-df6a83063cfb",
+      "nome": "Jhonson"
     }
   ],
   "medicamento": [
